@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import RegistrationForm from './Components/RegistrationForm';
 
-function App() {
+
+const App: React.FC = () => {
+  const handleNext = () => {
+    // Add logic for handling 'Next' button click, e.g., navigate to the next step
+    console.log('Next button clicked');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ float: 'right' }}>
+        {/* Add background image styling here */}
+      </div>
+      <RegistrationForm onNext={handleNext} />
     </div>
   );
-}
+};
 
 export default App;
+
+
